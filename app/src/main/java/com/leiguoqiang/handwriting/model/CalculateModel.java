@@ -2,7 +2,6 @@ package com.leiguoqiang.handwriting.model;
 
 import android.util.Log;
 
-import com.dosmono.device.KeyImpl;
 import com.leiguoqiang.handwriting.entity.PointBean;
 
 import java.math.BigDecimal;
@@ -15,61 +14,61 @@ import java.math.BigDecimal;
 public class CalculateModel {
 
     public static float add(float a, float b) {
-//        float result = new BigDecimal(a).add(new BigDecimal(b)).floatValue();
-//        return Float.isNaN(result) ? 0.0f : result;
-
-        float result = KeyImpl.add(a, b);
+        float result = new BigDecimal(a).add(new BigDecimal(b)).floatValue();
         return Float.isNaN(result) ? 0.0f : result;
+
+//        float result = KeyImpl.add(a, b);
+//        return Float.isNaN(result) ? 0.0f : result;
     }
 
     public static float subtraction(float a, float b) {
-//        float result = new BigDecimal(a).subtract(new BigDecimal(b)).floatValue();
-//        return Float.isNaN(result) ? 0.0f : result;
-
-        float result = KeyImpl.subtraction(a, b);
+        float result = new BigDecimal(a).subtract(new BigDecimal(b)).floatValue();
         return Float.isNaN(result) ? 0.0f : result;
+
+//        float result = KeyImpl.subtraction(a, b);
+//        return Float.isNaN(result) ? 0.0f : result;
     }
 
     public static float subtraction(long a, long b) {
-//        float result = new BigDecimal(a).subtract(new BigDecimal(b)).longValue();
-//        return Float.isNaN(result) ? 0.0f : result;
-//
-        float result = KeyImpl.subtraction(a, b);
+        float result = new BigDecimal(a).subtract(new BigDecimal(b)).longValue();
         return Float.isNaN(result) ? 0.0f : result;
+//
+//        float result = KeyImpl.subtraction(a, b);
+//        return Float.isNaN(result) ? 0.0f : result;
     }
 
     public static float multiple(float a, float b) {
-//        float result = new BigDecimal(a).multiply(new BigDecimal(b)).floatValue();
-//        return Float.isNaN(result) ? 0.0f : result;
-//
-        float result = KeyImpl.multiple(a, b);
+        float result = new BigDecimal(a).multiply(new BigDecimal(b)).floatValue();
         return Float.isNaN(result) ? 0.0f : result;
+//
+//        float result = KeyImpl.multiple(a, b);
+//        return Float.isNaN(result) ? 0.0f : result;
     }
 
     public static float divider(float a, float b) {
-//        float result = 0.0f;
-//        try {
-//            result = new BigDecimal(a).divide(new BigDecimal(b), 20, BigDecimal.ROUND_HALF_UP).floatValue();
-//        } catch (Exception e) {
-//            Log.i("handwriting_module:", "除法错误");
-//        }
-//        return Float.isNaN(result) ? 0.0f : result;
-//
-        float result = KeyImpl.divider(a, b);
+        float result = 0.0f;
+        try {
+            result = new BigDecimal(a).divide(new BigDecimal(b), 20, BigDecimal.ROUND_HALF_UP).floatValue();
+        } catch (Exception e) {
+            Log.i("handwriting_module:", "除法错误");
+        }
         return Float.isNaN(result) ? 0.0f : result;
+
+//        float result = KeyImpl.divider(a, b);
+//        return Float.isNaN(result) ? 0.0f : result;
     }
 
     public static float divider(long a, long b) {
-//        float result = 0;
-//        try {
-//            result = new BigDecimal(a).divide(new BigDecimal(b), 20, BigDecimal.ROUND_HALF_UP).longValue();
-//        } catch (Exception e) {
-//            Log.i("handwriting_module:", "除法错误");
-//        }
-//        return Float.isNaN(result) ? 0.0f : result;
-//
-        float result = KeyImpl.divider(a, b);
+        float result = 0;
+        try {
+            result = new BigDecimal(a).divide(new BigDecimal(b), 20, BigDecimal.ROUND_HALF_UP).longValue();
+        } catch (Exception e) {
+            Log.i("handwriting_module:", "除法错误");
+        }
         return Float.isNaN(result) ? 0.0f : result;
+
+//        float result = KeyImpl.divider(a, b);
+//        return Float.isNaN(result) ? 0.0f : result;
     }
 
     /**

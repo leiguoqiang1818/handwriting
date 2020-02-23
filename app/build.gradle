@@ -33,11 +33,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
     implementation 'androidx.annotation:annotation:1.0.0'
+
     implementation 'androidx.multidex:multidex:2.0.0'
     implementation 'androidx.appcompat:appcompat:1.0.0'
-    implementation rootProject.ext.dependencies["lib_calculation"]
+//    implementation rootProject.ext.dependencies["lib_calculation"]
 
     //临时
     implementation 'com.google.code.gson:gson:2.8.5'
