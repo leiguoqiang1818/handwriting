@@ -9,4 +9,4 @@
 
 技术交流：
 </br>
-![](https://raw.githubusercontent.com/leiguoqiang1818/handwriting/master/image/weixintouxiang.jpg)
+![](https://raw.githubusercontent.com/leiguoqiang1818/handwriting/master/image/weixintouxiangnew.jpg)
