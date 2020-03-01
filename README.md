@@ -7,6 +7,8 @@
 </br></br>技术支持：QQ（微信）274764936
 
 `效果图如下：`</br></br>
+![](https://raw.githubusercontent.com/leiguoqiang1818/handwriting/master/image/shouxie01.jpg)
+</br></br>
 ![](https://raw.githubusercontent.com/leiguoqiang1818/handwriting/master/image/shufa.jpg)
 </br></br>
 ![](https://raw.githubusercontent.com/leiguoqiang1818/handwriting/master/image/maozedong.jpg)
