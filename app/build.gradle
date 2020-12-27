@@ -10,7 +10,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         if (isApplication) {
-            applicationId "com.leiguoqiang.handwriting"
+            applicationId "com.leiguoqiang.handwritten"
         }
         minSdkVersion 21
         targetSdkVersion 28
@@ -37,7 +37,6 @@ dependencies {
 
     implementation 'androidx.multidex:multidex:2.0.0'
     implementation 'androidx.appcompat:appcompat:1.0.0'
-//    implementation rootProject.ext.dependencies["lib_calculation"]
 
     //临时
     implementation 'com.google.code.gson:gson:2.8.5'

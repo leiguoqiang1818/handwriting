@@ -5,10 +5,8 @@ ext {
             targetSdkVersion   : "27",
             versionCode        : "1",
             versionName        : "V1.0.0",
-            calculation_version: "1.1.7_beta03"
     ]
 
     dependencies = [
-            lib_calculation: "com.dosmono.library:device:${versions.calculation_version}"
     ]
 }

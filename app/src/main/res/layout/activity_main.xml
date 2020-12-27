@@ -10,7 +10,7 @@
     <!--    android:background="#ffffff"-->
     <!--    android:layout_height="300dp" />-->
 
-    <com.leiguoqiang.handwriting.views.HandwritingView
+    <com.leiguoqiang.handwritten.views.HandwritingView
         android:id="@+id/handwritingview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

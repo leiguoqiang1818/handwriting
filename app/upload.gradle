@@ -2,13 +2,12 @@ apply plugin: 'maven'
 apply plugin: 'signing'
 
 //为了区分不同渠道，需要每个渠道都有一份版本信息
-//笔记本版本
 ext {
-    PUBLISH_GROUP_ID = 'com.dosmono.module'
-    PUBLISH_ARTIFACT_ID = 'handwriting'
-    PUBLISH_VERSION = '1.0.0_B24'
+    PUBLISH_GROUP_ID = 'com.leiguoqiang.module'
+    PUBLISH_ARTIFACT_ID = 'handwritten'
+    PUBLISH_VERSION = '1.0.0_B01'
     PUBLISH_TYPE = 'aar'
-    PUBLISH_DESCRIPTION = 'dosmono.library'
+    PUBLISH_DESCRIPTION = 'leiguoqiang.library'
 }
 
 signing {
@@ -30,8 +29,8 @@ uploadArchives {
             println "pushconfig, uploadArchives : " + project.android.defaultConfig.versionName
 
             //指定项目部署到的中央库地址，UserName和Password就是Part 1中注册的账号。
-            repository(url: 'http://192.168.50.223:8081/nexus/content/repositories/thirdparty/') {
-                authentication(userName: 'admin', password: 'admin123')
+            repository(url: 'http://127.0.0.1:8081/nexus/content/repositories/thirdparty/') {
+                authentication(userName: 'leiguoqiang', password: 'leiguoqiang1818')
             }
 
             println "groupId : " + project.name + " artifactId : " + " version : " + android.defaultPublishConfig
