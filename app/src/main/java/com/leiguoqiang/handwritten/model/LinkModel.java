@@ -12,10 +12,5 @@ import com.leiguoqiang.handwritten.entity.PointBean;
  */
 public class LinkModel {
     public void drawCircle(PointBean pointPresure, PointBean pointCurrent, Canvas canvas, Paint paint) {
-        try {
-            float radius = CalculateModel.divider(CalculateModel.add(pointPresure.width, pointCurrent.width), 2.0f);
-            canvas.drawCircle(pointCurrent.x, pointCurrent.y, radius, paint);
-        } catch (Exception e) {
-        }
     }
 }

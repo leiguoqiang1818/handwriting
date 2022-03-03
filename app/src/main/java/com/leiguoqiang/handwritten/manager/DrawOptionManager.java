@@ -17,7 +17,6 @@ public class DrawOptionManager {
     private DrawCommonedApi mRevocationCommoned;
     private DrawCommonedApi mRecoverCommoned;
 
-
     public DrawOptionManager(DrawingManager drawingManager) {
         mClearCommoned = new ClearCommoned(drawingManager);
         mSaveCommoned = new SaveCommoned(drawingManager);

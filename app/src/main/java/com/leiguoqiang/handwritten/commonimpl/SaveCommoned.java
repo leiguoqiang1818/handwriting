@@ -17,6 +17,5 @@ public class SaveCommoned implements DrawCommonedApi {
 
     @Override
     public void excutor(Runnable runnable) {
-        // TODO: 2019/11/26 暂不实现，需要数据库支持
     }
 }

@@ -33,7 +33,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author leiguoqiang
  * contact: 274764936
  */
-public class HandwritingView extends View {
+public class DrawView extends View {
 
     private Paint mPaint = new Paint();
     private DrawingManager mDrawingManager;
@@ -68,22 +68,22 @@ public class HandwritingView extends View {
         this.mTouchEnable = mTouchEnable;
     }
 
-    public HandwritingView(Context context) {
+    public DrawView(Context context) {
         super(context);
         init();
     }
 
-    public HandwritingView(Context context, @androidx.annotation.Nullable AttributeSet attrs) {
+    public DrawView(Context context, @androidx.annotation.Nullable AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public HandwritingView(Context context, @androidx.annotation.Nullable AttributeSet attrs, int defStyleAttr) {
+    public DrawView(Context context, @androidx.annotation.Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
 
-    public HandwritingView(Context context, @androidx.annotation.Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public DrawView(Context context, @androidx.annotation.Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init();
     }
@@ -124,9 +124,6 @@ public class HandwritingView extends View {
         }
         final int action = event.getAction();
         int type = event.getToolType(0);
-//        if (filterFilger && type != MotionEvent.TOOL_TYPE_STYLUS) {
-//            return false;
-//        }
         switch (action) {
             case MotionEvent.ACTION_DOWN:
                 if (mHandler != null) {
@@ -138,16 +135,6 @@ public class HandwritingView extends View {
             case MotionEvent.ACTION_MOVE:
                 int size = event.getHistorySize();
                 PointBean tempBean;
-                //高精度模式，影响性能，慎重
-                if (mHighPrecision) {
-                    for (int index = 0; index < size; index++) {
-                        tempBean = new PointBean(event.getHistoricalX(index), event.getHistoricalY(index), event.getHistoricalEventTime(index), event.getHistoricalPressure(index));
-                        PointBean lastPoint = mDrawingManager.m();
-                        if (!tempBean.equals(lastPoint)) {
-                            mDrawingManager.a(tempBean);
-                        }
-                    }
-                }
                 PointBean lastPoint = mDrawingManager.m();
                 tempBean = new PointBean(event.getX(), event.getY(), event.getEventTime(), event.getPressure());
                 if (!tempBean.equals(lastPoint)) {
@@ -269,12 +256,10 @@ public class HandwritingView extends View {
             if (StrokeStatusConstant.CURRENT_STROKE_STATUS == strokeStatus) {
                 ColorConstant.CURRENT_STROKE_COLOR = color;
             }
-            //通用橡皮檫，直接透明色
         } else if (strokeStatus == StrokeStatusConstant.STROKE_STATUS_NORMAL_ERASER) {
             if (StrokeStatusConstant.CURRENT_STROKE_STATUS == strokeStatus) {
                 ColorConstant.CURRENT_STROKE_COLOR = ColorConstant.COLOR_NORMAL_CLEAR;
             }
-            //自定义橡皮檫，直接红色
         } else if (strokeStatus == StrokeStatusConstant.STROKE_STATUS_CUSTOM_ERASER) {
             if (StrokeStatusConstant.CURRENT_STROKE_STATUS == strokeStatus) {
                 ColorConstant.CURRENT_STROKE_COLOR = ColorConstant.COLOR_CUSTOM_ERASER;
